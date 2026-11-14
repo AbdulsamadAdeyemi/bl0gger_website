@@ -26,13 +26,11 @@
             <div class="nav-brand">
                 <a href="#" class="text-gray">Blooger</a>
             </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
+            <button class="toggle-collapse" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="toggle-icons" aria-hidden="true"><i class="fas fa-bars"></i></span>
+            </button>
             <div>
-                <ul class="nav-items">
+                <ul class="nav-items" id="primary-navigation">
                     <li class="nav-link">
                         <a href="#">Home</a>
                     </li>
@@ -320,7 +318,7 @@
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
                         <h2>Newsletter</h2>
                         <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
+                            <input type="email" class="input-element" placeholder="Email" aria-label="Email address" autocomplete="email" required>
                             <button class="btn form-btn">Subscribe</button>
                         </div>
                     </div>
@@ -361,7 +359,7 @@
                 <h2>Newsletter</h2>
                 <p>Stay update with our latest</p>
                 <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                    <input type="email" placeholder="Email" aria-label="Email address" autocomplete="email"><span><i class="fas fa-chevron-right"></i></span>
                 </div>
             </div>
             <div class="instagram" data-aos="fade-left" data-aos-delay="200">
