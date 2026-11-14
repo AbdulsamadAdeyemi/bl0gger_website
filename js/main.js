@@ -15,13 +15,15 @@ const responsive = {
 
 $(document).ready(function () {
 
-    $nav = $('.nav');
-    $toggleCollapse = $('.toggle-collapse');
+    const $nav = $('.nav');
+    const $toggleCollapse = $('.toggle-collapse');
 
-    /* click on toggle menu */
-    $toggleCollapse.click(function () {
-        $nav.toggleClass('collapse');
-    })
+    // Native button interaction supports mouse, touch, Enter and Space.
+    $toggleCollapse.on('click', function () {
+        const isExpanded = $nav.toggleClass('collapse').hasClass('collapse');
+        $(this).attr('aria-expanded', String(isExpanded));
+        $(this).attr('aria-label', isExpanded ? 'Close navigation' : 'Open navigation');
+    });
 
     // owl-crouselblog
     $('.owl-carousel').owlCarousel({
